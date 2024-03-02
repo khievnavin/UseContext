@@ -42,18 +42,7 @@ interface MyContextProps {
 export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
   // store state
   const [userInfo, setuserInfo] = useState([
-    {
-      id: "1",
-      username: "Tan Hangsapho",
-      email: "Phokonkhmer168@gmail.com",
-      profile: "/manith.png",
-    },
-    {
-      id: "2",
-      username: "Peng maleap",
-      email: "Leapkonkhmer168@gmail.com",
-      profile: "/manith.png",
-    },
+   
   ]);
 
   const [selectUser, setselectUser] = useState("");
