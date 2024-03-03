@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode, useEffect } from "react";
-import { useContext, useState, createContext } from "react"; 
+import {  useState, createContext } from "react"; 
 import { getLocalStorage, setLocalStorage } from "@/utils/LocalStorage";
 
 
@@ -9,7 +9,6 @@ import { getLocalStorage, setLocalStorage } from "@/utils/LocalStorage";
 interface UserInfo {
   id: string;
   username: string;
-  email: string;
   profile: string;
 }
 
@@ -49,7 +48,7 @@ export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
 
   // handle Delete Card
   const handleDelete = (id: string) => {
-    const newUser = userInfo.filter((item) => item.id !== id);
+    const newUser = userInfo.filter((user) => user.id !== id);
     setLocalStorage("userInfo" , newUser)
     setuserInfo(newUser);
 
@@ -57,8 +56,11 @@ export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
     // if (selectUser === id) {
     //   setselectUser("");
     // }
-
   };
+  // const clearAllUsers =() => {
+  //   setLocalStorage("userInfo", [])
+  //   setuserInfo([])
+  // }
   const updateUser = (user, selectCard: string) => {
     const newUser = userInfo.map((userInfo)=> {
       if (userInfo.id === selectCard){
@@ -113,6 +115,7 @@ export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
     handleDelete,
     updateUser,
     setselectUser,
+    // clearAllUsers,
     selectUser,
     findUser,
   };
@@ -124,5 +127,4 @@ export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
   );
 };
 
-// Create a custom hook to consume the context
 // export const useMyContext = () => useContext(MyContext);

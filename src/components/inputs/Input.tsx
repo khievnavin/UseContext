@@ -1,5 +1,5 @@
 import React from "react";
-import { ErrorsMessages } from "./ErrorsMessages";
+import { ErrorsMessages } from "../form/ErrorsMessages";
 
 interface InputProps {
   className?: string;

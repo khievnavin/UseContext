@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 const SearchInput = ({setSearch}) => {
 
@@ -14,6 +14,9 @@ const SearchInput = ({setSearch}) => {
       />
       <button className=" px-4 py-3 text-white bg-green-400 rounded-md ml-2 hover:bg-green-600">
         Search
+      </button>
+      <button   className=" px-4 py-3 text-white bg-green-400 rounded-md ml-2 hover:bg-green-600">
+        Clear All Card
       </button>
     </div>
   );

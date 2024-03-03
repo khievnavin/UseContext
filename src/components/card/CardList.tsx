@@ -3,7 +3,7 @@ import { Card } from "./Card";
 import {  MyContext } from "@/Context/context";
 
 const CardList = ({search}) => {
-  const {userInfo,setselectUser ,selectUser,handleDelete} = useContext(MyContext)
+  const {userInfo,setselectUser ,selectUser,handleDelete,} = useContext(MyContext)
   return (
     
     <><div>

@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({
           : "flex justify-between items-start w-[420px]   m-auto mt-5 p-2 border border-[#d6c2e7] rounded-lg hover:bg-gray-200 shadow-xl"
       }
     >
-      <div className="flex flex-row justify-center gap-2 ">
+      <div className="flex flex-row justify-center gap-5">
         <div className="flex flex-auto">
           <Image
             src={image}
