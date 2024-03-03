@@ -45,14 +45,14 @@ const Card: React.FC<CardProps> = ({
         <div className="flex flex-auto">
           <Image
             src={image}
-            width={90}
-            height={90}
-            className="border rounded-full"
+            width={290}
+            height={220}
+            className="border rounded-md"
             alt="User's Photo"
           ></Image>
         </div>
         <div className="flex flex-col gap-1 justify-center">
-          <p className="text-lg font-semibold text-[#33363F] font-sans ">
+          <p className="text-lg font-light text-[#33363F] hover:font-black ">
             {name}
           </p>
 

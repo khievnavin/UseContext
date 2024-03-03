@@ -52,15 +52,8 @@ export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
     setLocalStorage("userInfo" , newUser)
     setuserInfo(newUser);
 
-    // If the deleted card was selected, clear the selection
-    // if (selectUser === id) {
-    //   setselectUser("");
-    // }
   };
-  // const clearAllUsers =() => {
-  //   setLocalStorage("userInfo", [])
-  //   setuserInfo([])
-  // }
+  // handle Update Card
   const updateUser = (user, selectCard: string) => {
     const newUser = userInfo.map((userInfo)=> {
       if (userInfo.id === selectCard){
@@ -73,20 +66,8 @@ export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
     });
     setLocalStorage("userInfo", newUser);
     setuserInfo(newUser);
-
-    // setuserInfo((prevUsers) => {
-    //   return prevUsers.map((prevUser) => {
-    //     if (prevUser.id === selectCard) {
-    //       return {
-    //         ...prevUsers,
-    //         ...user
-    //       };
-    //     }
-    //     return prevUser;
-    //   });
-    
-    // });
   };
+   // handle FormAdd Card
     const handleFormAdd=(userInfo : any)=>{
     const newId = Math.random().toString(36).substring(2, 8); // return 1f74e
         const newUser = { ...userInfo, id: newId };
@@ -97,8 +78,6 @@ export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
         });
         
   };
-
-  // handle Update
 
   // find selectuser
   const findUser = userInfo.find((item) => item.id === selectUser); 
@@ -115,7 +94,6 @@ export const MyContextProvider: React.FC<MyContextProps> = ({ children }) => {
     handleDelete,
     updateUser,
     setselectUser,
-    // clearAllUsers,
     selectUser,
     findUser,
   };
